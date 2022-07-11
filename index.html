@@ -7,36 +7,64 @@
   <title>Calculator</title>
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7e42942710.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Calculator</h1>
-  <div class="window-1">
-    <div id="result">0</div>
+  <h1 class="title">Calculator</h1>
+  <div class="content">
+    <div class="window">
+      <div id="result" class="output text white">0</div>
+    </div>
+    <div class="row-first">
+      <button class="btn text orange" data-clear-all>AC</button>
+      <button class="btn text orange" data-delete><i class="fa-solid fa-delete-left"></i></button>
+      <button class="btn text orange" data-percent><i class="fa-solid fa-percent"></i></button>
+      <button class="btn text orange big" data-operation>÷</button>
+    </div>
+    <div class="row-second">
+      <button class="btn text white" data-number>7</button>
+      <button class="btn text white" data-number>8</button>
+      <button class="btn text white" data-number>9</button>
+      <button class="btn text orange big" data-operation>×</button>
+    </div>
+    <div class="row-third">
+      <button class="btn text white" data-number>4</button>
+      <button class="btn text white" data-number>5</button>
+      <button class="btn text white" data-number>6</button>
+      <button class="btn text orange big" data-operation>-</button>
+    </div>
+    <div class="row-fourth">
+      <button class="btn text white" data-number>1</button>
+      <button class="btn text white" data-number>2</button>
+      <button class="btn text white" data-number>3</button>
+      <button class="btn text orange big" data-operation>+</button>
+    </div>
+    <div class="row-fifth">
+      <button class="btn text orange"><a href="https://discordapp.com/users/Colazzo#2004"><i class="fa-brands fa-discord"></i></a></button>
+      <button class="btn text white" data-number>0</button>
+      <button class="btn text white" data-comma>.</button>
+      <button class="btn text orange big" data-equal>=</button>
+    </div>
   </div>
-  <div class="operators">
-    <button data-operation>+</button>
-    <button data-operation>-</button>
-    <button data-operation>×</button>
-    <button data-operation>÷</button>
-    <button data-percent>%</button>
-  </div>
-  <div class="number">
-    <button data-number>1</button>
-    <button data-number>2</button>
-    <button data-number>3</button>
-    <button data-number>4</button>
-    <button data-number>5</button>
-    <button data-number>6</button>
-    <button data-number>7</button>
-    <button data-number>8</button>
-    <button data-number>9</button>
-  </div>
-  <div class="other">
-    <button data-clear-all>AC</button>
-    <button data-number>0</button>
-    <button data-comma>.</button>
-    <button data-equal>=</button>
-    <button data-delete>X</button>
+  <div class="footer">
+    <div class="instruction">
+      Instruction:
+      <ul>
+        <li>> Max 8 chars</li>
+        <li>> You can't divide by 0</li>
+        <li>> May have bugs</li>
+      </ul>
+    </div>
+    <div class="copyright">
+      Copyright © 
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      Colazzo
+    </div>
   </div>
 </body>
-</html>
+</html> 
