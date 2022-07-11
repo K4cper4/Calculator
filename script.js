@@ -72,7 +72,7 @@ function commaCheck()
 {
     if (tempResult !== '')
     {
-        if (tempResult.includes('.')) return
+        if (b.includes('.')) return
         else if (b == '')
         {
             b += '0.'
@@ -138,6 +138,11 @@ function makePercent()
 
 function appendNumber(number)
 {
+    if (resultShow == 'ERROR')
+    {
+        clear()
+    }
+
     if (resultShow == '0')
     {
         resultShow = ''
@@ -197,6 +202,10 @@ function equal()
     }
     
     resultShow = roundResult(calculator(currentOperation, firstOperand, secondOperand))
+    if (isNaN(resultShow))
+    {
+        resultShow = 'ERROR'
+    }
     result.innerText = resultShow
     b = ''
     currentOperation = null
@@ -238,27 +247,11 @@ function multiply(a, b)
 
 function divide(a, b)
 {
-    return a / b
-}
-
-function operate(operator, a, b)
-{
-    if (operator === '+')
+    if (b == 0)
     {
-        add(a, b)
+        return 'ERROR'
     }
-    else if (operator === '-')
-    {
-        subtract(a, b)
-    }
-    else if (operator === '×')
-    {
-        multiply(a, b)
-    }
-    else if (operator === '÷')
-    {
-        divide(a, b)
-    }
+    else return a / b
 }
 
 // Operation convert (* -> × || / -> ÷)
